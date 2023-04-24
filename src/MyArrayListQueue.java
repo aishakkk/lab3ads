@@ -26,6 +26,6 @@ public class MyArrayListQueue<T> implements Queue<T> {
 
     @Override
     public int size() {
-        return 0;
+        return list.size();
     }
 }
