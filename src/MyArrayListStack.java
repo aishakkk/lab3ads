@@ -25,6 +25,6 @@ public class MyArrayListStack<T> implements Stack<T> {
 
     @Override
     public int size() {
-        return 0;
+        return list.size();
     }
 }
