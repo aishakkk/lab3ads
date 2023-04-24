@@ -10,7 +10,7 @@ public class MyArrayListStack<T> implements Stack<T> {
 
     @Override
     public T pop() {
-        return null;
+        return (T) list.remove(0);
     }
 
     @Override
