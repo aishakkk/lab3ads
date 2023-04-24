@@ -11,7 +11,7 @@ public class MyArrayListQueue<T> implements Queue<T> {
 
     @Override
     public T dequeue() {
-        return null;
+        return (T) list.remove(list.size()-1);
     }
 
     @Override
