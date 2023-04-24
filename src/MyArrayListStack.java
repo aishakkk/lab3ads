@@ -20,7 +20,7 @@ public class MyArrayListStack<T> implements Stack<T> {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return list.isEmpty();
     }
 
     @Override
