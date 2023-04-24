@@ -21,7 +21,7 @@ public class MyArrayListQueue<T> implements Queue<T> {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return list.isEmpty();
     }
 
     @Override
