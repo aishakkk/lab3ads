@@ -3,6 +3,17 @@ public class MyArrayListStack<T> implements Stack<T> {
     public MyArrayListStack() {
         this.list = new MyArrayList<>();
     }
+    public void printStack() {
+        System.out.println("Your stack right now like this:");
+        String format = "|  %1$-3s|\n";
+        System.out.println("_______");
+        System.out.format("|%1$-4s|\n", "Stack");
+        System.out.println("|_____|");
+        for(int i = 0; i < size(); i++) {
+            System.out.format(format, list.get(i));
+        }
+        System.out.println("|_____|");
+    }
     @Override
     public void push(T item) {
         list.add(item, 0);
