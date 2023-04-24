@@ -1,5 +1,8 @@
 public class MyArrayListStack<T> implements Stack<T> {
-    MyArrayList<T> list = new MyArrayList<>();
+    MyArrayList<T> list;
+    public MyArrayListStack() {
+        this.list = new MyArrayList<>();
+    }
     @Override
     public void push() {
 
