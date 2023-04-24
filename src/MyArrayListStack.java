@@ -15,7 +15,7 @@ public class MyArrayListStack<T> implements Stack<T> {
 
     @Override
     public T peek() {
-        return null;
+        return list.get(0);
     }
 
     @Override
