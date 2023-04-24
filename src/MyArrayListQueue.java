@@ -16,7 +16,7 @@ public class MyArrayListQueue<T> implements Queue<T> {
 
     @Override
     public T peek() {
-        return null;
+        return list.get(list.size());
     }
 
     @Override
