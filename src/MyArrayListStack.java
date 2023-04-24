@@ -4,8 +4,8 @@ public class MyArrayListStack<T> implements Stack<T> {
         this.list = new MyArrayList<>();
     }
     @Override
-    public void push() {
-
+    public void push(T item) {
+        list.add(item, 0);
     }
 
     @Override
