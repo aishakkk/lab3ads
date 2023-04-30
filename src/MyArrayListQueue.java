@@ -75,4 +75,8 @@ public class MyArrayListQueue<T> implements Queue<T> {
     public int size() {
         return list.size();
     }
+
+    public void flush() {
+        this.list = new MyArrayList<>();
+    }
 }
