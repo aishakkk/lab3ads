@@ -76,6 +76,11 @@ public class MyArrayListQueue<T> implements Queue<T> {
         return list.size();
     }
 
+    /**
+     * @function flush - flush the queue, lose all the values in the queue and instantiate the queue
+     * @noparam
+     * @return void
+     */
     public void flush() {
         this.list = new MyArrayList<>();
     }

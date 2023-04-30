@@ -77,6 +77,11 @@ public class MyArrayListStack<T> implements Stack<T> {
         return list.size();
     }
 
+    /**
+     * @function flush - flush the stack, lose all the values in the stack and instantiate the stack
+     * @noparam
+     * @return void
+     */
     public void flush() {
         this.list = new MyArrayList<>();
     }
