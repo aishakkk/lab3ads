@@ -24,7 +24,7 @@ public interface Queue<T> {
 ```
 ## 🔔 classes
 ### 📘 MyArrayListStack.java
-> **Description:** creating a class MyArrayListStack to understand how stacks works and see examples. Class has method: *push*, *pop*, *peek*, *isEmpty*, *size*, *printStack*.
+> **Description:** creating a class MyArrayListStack to understand how stacks works and see examples. Class has method: *push*, *pop*, *peek*, *isEmpty*, *size*, *printStack*, *flush*.
 ###
 🌕 **method printStack()**
 ```java
@@ -75,8 +75,15 @@ public int size() {
     return list.size();
 }
 ```
+🌕 **method flush()**
+```java
+@Override
+public int flush() {
+    this.list = new MyArrayList<>();
+}
+```
 ### 📘 MyArrayListQueue.java
-> Description: creating a class MyArrayListQueue to understand how queues works and see examples. Class has method: *enqueue*, *dequeue*, *peek*, *isEmpty*, *size*, *printStack*.
+> Description: creating a class MyArrayListQueue to understand how queues works and see examples. Class has method: *enqueue*, *dequeue*, *peek*, *isEmpty*, *size*, *printStack*, *flush*.
 ###
 🌑 **method printStack()**
 ```java
@@ -126,5 +133,12 @@ public boolean isEmpty() {
 @Override
 public int size() {
     return list.size();
+}
+```
+🌑 **method flush()**
+```java
+@Override
+public int flush() {
+    this.list = new MyArrayList<>();
 }
 ```
