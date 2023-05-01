@@ -1,3 +1,4 @@
+import java.util.NoSuchElementException;
 public class MyArrayListQueue<T> implements Queue<T> {
     private MyArrayList<T> list; // ArrayList from last assignment to store data
     /**
@@ -52,7 +53,8 @@ public class MyArrayListQueue<T> implements Queue<T> {
      * @return T - returning first element in queue in generic type
      */
     @Override
-    public T peek() {
+    public T peek() throws NoSuchElementException {
+        isEmptyThrowException();
         return list.get(list.size()-1);
     }
 
@@ -75,7 +77,16 @@ public class MyArrayListQueue<T> implements Queue<T> {
     public int size() {
         return list.size();
     }
-
+    /**
+     * @function isEmptyThrowException - throwing exception to avoid errors
+     * @noparam
+     * @return void
+     */
+    private void isEmptyThrowException() throws NoSuchElementException {
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+    }
     /**
      * @function flush - flush the queue, lose all the values in the queue and instantiate the queue
      * @noparam

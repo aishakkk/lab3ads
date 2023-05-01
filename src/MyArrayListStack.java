@@ -1,3 +1,4 @@
+import java.util.EmptyStackException;
 public class MyArrayListStack<T> implements Stack<T> {
     MyArrayList<T> list; // ArrayList from last assignment to store data
 
@@ -44,6 +45,7 @@ public class MyArrayListStack<T> implements Stack<T> {
      */
     @Override
     public T pop() {
+        isEmptyThrowException();
         return (T) list.remove(0);
     }
 
@@ -54,6 +56,7 @@ public class MyArrayListStack<T> implements Stack<T> {
      */
     @Override
     public T peek() {
+        isEmptyThrowException();
         return list.get(0);
     }
 
@@ -75,6 +78,17 @@ public class MyArrayListStack<T> implements Stack<T> {
     @Override
     public int size() {
         return list.size();
+    }
+
+    /**
+     * @function isEmptyThrowException - throwing exception to avoid errors
+     * @noparam
+     * @return void
+     */
+    private void isEmptyThrowException() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
     }
 
     /**
